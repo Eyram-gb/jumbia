@@ -18,7 +18,7 @@ export const product = {
           name: "slug",
           title: "Slug",
           type: "slug",
-          options: { source: "brand" },
+          options: { source: "brand.name" },
         },
       ],
     },
