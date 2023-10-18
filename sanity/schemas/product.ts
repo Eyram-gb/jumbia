@@ -41,7 +41,7 @@ export const product = {
       type: "number",
     },
     {
-      name: "disconut",
+      name: "discount",
       title: "Discount",
       type: "number",
       validation: (Rule: any) => Rule.required().min(0).max(100),
