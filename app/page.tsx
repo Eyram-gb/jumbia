@@ -1,10 +1,14 @@
-import { getProducts } from '@/sanity/utils/product'
+import { getProducts, getProductsByBrand, getProductsCategory } from '@/sanity/utils/product'
 import Image from 'next/image'
 
 export default async function Home() {
   const products = await getProducts();
-  console.log('products=>', products);
-  
+  const productsByBrand = await getProductsByBrand('Fendi');
+  const productsByCat = await getProductsCategory('a3c66961-9cb4-4b92-8f93-0542b7fa58a4');
+  console.log('brand ====== ', productsByBrand);
+  console.log('category ====== ', productsByCat);
+  // console.log('products=>', products);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
