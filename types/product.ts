@@ -1,5 +1,3 @@
-
-
 export interface Product {
   image: string;
   discount: null;
@@ -24,6 +22,11 @@ export interface Slug {
 
 export interface Category {
   name: string;
+  id: string;
+  image: {
+    url: string;
+    alt: string;
+  };
   parentCategory: ParentCategory;
 }
 
